@@ -18,12 +18,18 @@ module.exports = function (app, addon) {
 
     // Render the macro by returning html generated from the hello-world template.
     // The hello-world template is defined in /views/hello-world.hbs.
-    app.get('/macro', addon.authenticate(), function (req, res) {
+    /*app.get('/macro', addon.authenticate(), function (req, res) {
             res.render('hello-world', {
                 title: 'Atlassian Connect'
             });
         }
-    );
+    );*/
+
+
+    app.get('/macro', addon.authenticate(), function(req, res){
+        req.sendFile( path.join(__dirname, 'react-project/build/index.html') )
+    })
+
 
     // Add any additional route handlers you need for views or REST resources here...
 

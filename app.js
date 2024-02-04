@@ -67,6 +67,8 @@ app.use(express.static(staticDir));
 // Show nicer errors when in dev mode
 if (devEnv) app.use(errorHandler());
 
+app.use( '/macro', express.static( path.join(__dirname, 'static/test-react/build') ));
+
 // Wire up your routes using the express and `atlassian-connect-express` objects
 routes(app, addon);
 

@@ -23,13 +23,13 @@
       "modules": {
         "dynamicContentMacros": [
           {
-            "key": "helloworld-macro",
+            "key": "airmacro",
             "name": {
-              "value": "Hello World Macro"
+              "value": "AIR 매크로"
             },
             "url": "/macro",
             "description": {
-              "value": "Says 'Hello World'."
+              "value": "AIR 매크로입니다."
             },
             "outputType": "block",
             "bodyType": "none"
